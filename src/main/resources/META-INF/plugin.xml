@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.zengxinqian.mql5plugin</id>
-    <name>mql5-plugin</name>
+    <name>MQL5 Language</name>
     <vendor>zengxinqian</vendor>
 
     <depends>com.intellij.modules.platform</depends>
@@ -10,6 +10,12 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.zengxinqian.mql5plugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <fileType
+                name="MQL5 File"
+                implementationClass="com.github.zengxinqian.mql5plugin.MQL5FileType"
+                fieldName="INSTANCE"
+                language="MQL5"
+                extensions="mq5"/>
     </extensions>
 
     <applicationListeners>
